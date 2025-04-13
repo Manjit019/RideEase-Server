@@ -7,18 +7,6 @@
 This repository contains a Node.js application that enables real-time location tracking for both customers and riders using WebSocket and Socket.IO. The app integrates with Google Maps to provide a seamless tracking experience.
 
 
-
-<div align="center">
-  <img src="https://res.cloudinary.com/dve6uywal/image/upload/v1740041169/js62de3rwhasf8vi2vdv.jpg" alt="App Screenshot" width="600" />
-  
-  <br/>
-
-  <a href="https://m.youtube.com/watch?v=u_8-jF01hW8">
-    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
-  </a>
-</div>
-
-
 ## Features
 
 - **Real-Time Location Tracking**: Track the location of both the rider and the customer in real-time.
@@ -38,13 +26,13 @@ This repository contains a Node.js application that enables real-time location t
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Ritik5Prasad/Ride_Booking_Server.git
+   git clone https://github.com/manjit019/RideEase_Server.git
 
 
 2. Navigate to the project directory::
 
    ```bash
-   cd nodejs-rider-app
+   cd server
 
 3. Install the dependencies:
 
@@ -62,7 +50,6 @@ This repository contains a Node.js application that enables real-time location t
 
 If you found this project helpful, consider giving it a **star** ⭐!  
 
-📺 Don't forget to **like & subscribe** on [YouTube]([#](https://m.youtube.com/watch?v=u_8-jF01hW8)) for more awesome content.  
 
 Happy coding! 🚀🔥  
 
