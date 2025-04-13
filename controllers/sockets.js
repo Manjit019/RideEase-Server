@@ -120,7 +120,7 @@ const handleSocketConnection = (io) => {
         socket.emit("riderLocationUpdate", { riderId, coords: rider.coords });
         console.log(`User ${user.id} subscribed to rider ${riderId}'s location.`);
       }
-    });
+    }); 
 
     socket.on("subscribeRide", async (rideId) => {
       socket.join(`ride_${rideId}`);
