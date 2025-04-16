@@ -25,7 +25,7 @@ app.use(express.json());
 
 const server = http.createServer(app);
 
-const io = new socketIo(server, { cors: { origin: "*" } });
+const io = new socketIo(server, { cors: { origin: "*" },transports : ['websocket'] });
 
 // Attach the WebSocket instance to the request object
 app.use((req, res, next) => {

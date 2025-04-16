@@ -102,7 +102,7 @@ const handleSocketConnection = (io) => {
 
             if (ride.rider) {
               const riderSocket = getRiderSocket(ride.rider._id);
-              riderSocket?.emit("rideCanceled", { message: `Customer ${user.id} canceled the ride.` });
+              riderSocket.emit("rideCanceled", { message: `Customer ${user.id} canceled the ride.` });
             }
             console.log(`Customer ${user.id} canceled ride ${rideId}`);
           });
