@@ -56,6 +56,7 @@ export const createRide = async (req, res) => {
     await ride.save();
 
     res.status(StatusCodes.CREATED).json({
+      success : true,
       message: "Ride created successfully",
       ride,
     });
