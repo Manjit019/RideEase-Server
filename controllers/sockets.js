@@ -113,7 +113,7 @@ const handleSocketConnection = (io) => {
       });
     }
 
-    socket.on("subscribeToriderLocation", (riderId) => {
+    socket.on("subscribeToriderLocation", (riderId) => { 
       const rider = onDutyRiders.get(riderId);
       if (rider) {
         socket.join(`rider_${riderId}`);
