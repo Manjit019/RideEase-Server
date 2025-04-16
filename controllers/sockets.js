@@ -94,7 +94,7 @@ const handleSocketConnection = (io) => {
             clearInterval(retryInterval);
           });
 
-          socket.on("cancelRide", async () => {
+          socket.on("cancelRide", async (rideId) => {
             canceled = true;
             clearInterval(retryInterval);
             await Ride.findByIdAndDelete(rideId);
