@@ -127,7 +127,7 @@ const handleSocketConnection = (io) => {
       try {
         const rideData = await Ride.findById(rideId).populate("customer rider");
         socket.emit("rideData", rideData);
-      } catch (error) {
+      } catch (error) { 
         socket.emit("error", { message: "Failed to receive ride data" });
       }
     });
