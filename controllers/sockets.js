@@ -27,7 +27,7 @@ const handleSocketConnection = (io) => {
     const user = socket.user;
     console.log(`User Joined: ${user.id} (${user.role})`);
 
-    if (user.role === "rider") {
+    if (user.role === "rider") { 
       socket.on("goOnDuty", (coords) => {
         onDutyRiders.set(user.id, { socketId: socket.id, coords });
         socket.join("onDuty");
