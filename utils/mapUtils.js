@@ -10,15 +10,15 @@ export const calculateDistance = (lat1, lon1, lat2, lon2) => {
       Math.sin(dLon / 2);
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   return R * c;
-};
+}; 
 
 export const calculateFare = (distance) => {
   const rateStructure = {
-    bike: { baseFare: 10, perKmRate: 5, minimumFare: 25 },
-    auto: { baseFare: 15, perKmRate: 7, minimumFare: 30 },
-    cabEconomy: { baseFare: 20, perKmRate: 10, minimumFare: 50 },
-    cabPremium: { baseFare: 30, perKmRate: 15, minimumFare: 70 },
-  };
+    bike: { baseFare: 10, perKmRate: 2, minimumFare: 15 },
+    auto: { baseFare: 15, perKmRate: 4, minimumFare: 50 },
+    cabEconomy: { baseFare: 20, perKmRate: 7, minimumFare: 70 },
+    cabPremium: { baseFare: 30, perKmRate: 9, minimumFare: 100 },
+};
 
   const fareCalculation = (baseFare, perKmRate, minimumFare) => {
     const calculatedFare = baseFare + distance * perKmRate;
