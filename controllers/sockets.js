@@ -148,11 +148,16 @@ const handleSocketConnection = (io) => {
 
     function sendNearbyRiders(socket, location, ride = null) {
       const nearbyriders = Array.from(onDutyRiders.values())
-        .map((rider) => ({
-          ...rider,
-          distance: geolib.getDistance(rider.coords, location),
-        }))
-        .filter((rider) => rider.distance <= 60000)
+        .map((rider) => {
+          if (!rider.coords || !location) {
+            return null;
+          }
+          return {
+            ...rider,
+            distance: geolib.getDistance(rider.coords, location),
+          };
+        })
+        .filter((rider) => rider && rider.distance <= 60000)
         .sort((a, b) => a.distance - b.distance);
 
       socket.emit("nearbyriders", nearbyriders);
